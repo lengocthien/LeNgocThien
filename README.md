@@ -7,7 +7,7 @@
 ### Lớp: CCQ2111J
 
 ## Tên đề tài:
-### Xây dựng website bán bánh
+### Xây dựng website Trang sức
 
 ## Công nghệ: 
 ### Trang người dùng: ReactJs,

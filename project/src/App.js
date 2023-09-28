@@ -10,6 +10,8 @@ import Footer from "./common/footer/Footer"
 import Sdata from "./components/shops/Sdata"
 import Register from "./common/register/Register"
 import Contact from"./common/contact/Contact"
+import Product from"./common/product/Product"
+import Profile  from "./common/Profile/Profile_Setting"
 
 function App() {
   /*
@@ -26,6 +28,7 @@ function App() {
 
   //Step 1 :
   const { productItems } = Data
+  
   const { shopItems } = Sdata
 
   //Step 2 :
@@ -33,6 +36,9 @@ function App() {
   const [LoginItem,] = useState([])
   const [RegisterItem,] = useState([])
   const [ContactItem,] = useState([])
+  const [productItem,] = useState([])
+  const [profileItem,] = useState([])
+
 
   //Step 4 :
   const addToCart = (product) => {
@@ -94,6 +100,13 @@ function App() {
 
           <Route path='/Contact' exact>
             <Contact ContactItem={ContactItem}  ></Contact> 
+            </Route>
+
+            <Route path='/Product' exact>
+            <Product productItem={productItem}  ></Product> 
+          </Route>
+          <Route path='/Profile' exact>
+            <Profile profileItem={profileItem}  ></Profile> 
           </Route>
         </Switch>
         <Footer />

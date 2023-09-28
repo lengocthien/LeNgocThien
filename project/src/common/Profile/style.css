@@ -1,0 +1,19 @@
+.itemside .aside img{
+    border: 1px solid #e5e7ea !important;
+    padding: 5px;
+}
+.itemside .aside{
+    float: left ;
+    margin-right: 10px;
+}
+
+.icontext .icon-avt{
+    float: left;
+    margin-right: 19px;
+}
+.card-body .text-address{
+    font-size: 15px;
+}
+#btn-change-pass:hover{
+    background-color: #e68a00;
+}

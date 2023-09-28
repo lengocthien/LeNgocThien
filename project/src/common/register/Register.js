@@ -1,33 +1,4 @@
-// import React from 'react'
-// import "./Style.css"
 
-// const Register = ({RegisterItem}) => {
-//   return (
-//     <>
-//     <section className='Register-items'></section>
-//         <body>
-//             <div className="formmain">
-//                 <div class="form">
-//                     <h2>Đăng ký Tài Khoản</h2>
-//                     {/* <i class="fab fa-app-store-ios"></i> */}
-//                     <label>Họ và tên</label>
-//                     <input type="text" name="hoten"/>
-//                     <label>Số điện thoại</label>
-//                     <input type="text" name="sdt"/>	
-//                     <label>Email</label>
-//                     <input type="text" name="email"/> 
-//                     <label>PassWord</label>
-//                     <input type="text" name="password"/> 
-//                     <input id="submit" type="submit" name="submit" value="Gửi"/>
-//                 </div>				
-//             </div>
-//         </body>
-
-//     </>
-//   )
-// }
-
-// export default Register
 import { Link } from "react-router-dom";
 import "./Style.css"
 
@@ -63,6 +34,12 @@ function Register() {
                                     <a rel="noopener noreferrer" href="#"></a>
                                 </div> */}
                                 </div>
+                                <div class="forgot">
+                                <p class="signup">Bạn đã có tài khoản?
+                                <Link rel="noopener noreferrer" to="/login" class="">Đăng nhập</Link>
+                                 </p>
+                                 </div>
+                                
                                 <div class="mb-3"></div>
                                 <button class="sign">Đăng ký</button>
                             </form>
@@ -88,9 +65,9 @@ function Register() {
                                     </svg>
                                 </Link>
                             </div>
-                            <p class="signup">Bạn đã có tài khoản?
+                            {/* <p class="signup">Bạn đã có tài khoản?
                                 <Link rel="noopener noreferrer" to="/login" class="">Đăng nhập</Link>
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div >

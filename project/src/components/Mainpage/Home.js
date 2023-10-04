@@ -3,6 +3,8 @@ import Categories from "./Categories"
 import "./Home.css"
 import SliderHome from "./Slider"
 
+import ShopCart from "../shops/ShopCart"
+
 const Home = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const Home = () => {
         <div className='container d_flex'>
           <Categories />
           <SliderHome />
+          
         </div>
       </section>
     </>

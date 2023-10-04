@@ -1,5 +1,4 @@
 import React from "react"
-import Catg from "./Catg"
 import Product from "./Product"
 import "./Style.css"
 
@@ -7,9 +6,7 @@ const Shop = ({ addToCart, shopItems }) => {
   return (
     <>
       <section className='shop background'>
-        <div className='container d_flex'>
-          <Catg />
-
+      <div className='container d_flex'>
           <div className='contentWidth'>
             <div className='heading d_flex'>
               <div className='heading-left row  f_flex'>

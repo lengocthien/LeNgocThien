@@ -197,7 +197,7 @@
     outline: 0;
     background-color: rgba(17, 24, 39, 1);
     padding: 0.75rem 1rem;
-    color: rgba(243, 244, 246, 1);
+    /* color: rgba(243, 244, 246, 1); */
   }
   
   .input-group input:focus {

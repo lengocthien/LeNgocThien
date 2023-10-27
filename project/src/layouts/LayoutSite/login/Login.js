@@ -1,8 +1,33 @@
 
 
-import { Link } from "react-router-dom";
-import "./Login.css"
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
+import { useState } from "react";
+import userservices from "../../../services/UserServies";
 function Login() {
+    const navigate = useNavigate();
+
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
+
+    async function Login(event) {
+        event.preventDefault();
+        const user = new FormData();
+        user.append("email", email);
+        user.append("password", password);
+
+        await userservices.Login(user).then(function (result) {
+            if (result.data.success === true) {
+                alert(result.data.message);
+                navigate('/', { replace: true });
+            }
+            else {
+                alert(result.data.message);
+                navigate('/pages/login', { replace: true });
+            }
+
+        })
+    }
     return (
         <div className="bg-login">
             <div className="container row ">

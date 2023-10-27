@@ -1,0 +1,19 @@
+.policy {
+    color:  #541010;
+    display: contents;
+    margin-bottom: 20px;
+}
+
+.title-policy {
+    margin-top: 10px;
+    background-color:  #e57e7e;
+    color:  #541010;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+.text-policy
+{
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 500;
+   margin-left: 10px;
+}

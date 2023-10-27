@@ -52,18 +52,23 @@
 // export default Product
 // import React from 'react'
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import productservice from "../../services/ProductServies";
-import { urlImage } from "../../config";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import productservice from "../../../services/ProductServies";
+import { urlImage } from "../../../config";
 
 function Product() {
   const { id } = useParams();
   // const navigate = useNavigate(); // chuyen trang
-  const RenderShopItems = ({ shopItems, addToCart }) => {
+  const Product = ({ shopItems, addToCart }) => {
     const [count, setCount] = useState(0);
     const increment = () => {
       setCount(count + 1);
     };
+    // const Product = ({ shopItems, addToCart }) => {
+//   const [count, setCount] = useState(0)
+//   const increment = () => {
+//     setCount(count + 1)
+//   }
     const [limit, setLimit] = useState(50);
     const [products, setProducts] = useState([]);
 
@@ -97,19 +102,23 @@ function Product() {
               <div className='product mtop'>
                 <div className='img'>
                   <span className='discount'>{pro.price_sale}% Off</span>
+                  <Link to={"/details-product/" + pro.slug}>
                   <img
                     className='img-fluid'
                     src={urlImage + "product/" + pro.image}
                     alt='lt4.png'
                   />
+                  </Link>
                   {/* <img src={shopItems.cover} alt='' /> */}
-                  {/* <div className='product-like'>
-                     <label>{count}</label> <br />
+                  
+                  <div className='product-like'>
+                     <label>{count}</label> 
                      <i className='fa-regular fa-heart' onClick={increment}></i>
-                   </div> */}
+                   </div>
                 </div>
+
                 <div className='product-details'>
-                  <h3>{pro.name}</h3>
+                <Link to={"/details-product/" + pro.slug}><h3>{pro.name}</h3></Link>
                   <div className='rate'>
                      <i className='fa fa-star'></i>
                      <i className='fa fa-star'></i>
@@ -139,7 +148,7 @@ function Product() {
     );
   };
 
-  return <RenderShopItems />;
+  return <Product />;
 }
 
 export default Product;

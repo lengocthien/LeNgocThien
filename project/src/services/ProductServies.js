@@ -44,7 +44,9 @@ function remove(id){
 
 }
 
-
+function getSearchProduct(key,limit,page){
+    return httpApi.get(`product/search_product/${key}/${limit}/${page}`);
+}
 
 
 const productservice = {
@@ -57,6 +59,7 @@ const productservice = {
     getById: getById,
     create: create,
     update: update,
-    remove: remove
+    remove: remove,
+    getSearchProduct:getSearchProduct,
 }
 export default productservice;

@@ -75,7 +75,7 @@ function SliderCard(props) {
                <div className='box d_flex top' key={index}>
                  <div className='left'>
                    <h1>{value.name}</h1>
-                   <p>{value.decs}</p>
+                   <p>{value.description}</p>
                    <button className='btn-primary'>Visit Collections</button>
                  </div>
                  {/* <div className='right'>

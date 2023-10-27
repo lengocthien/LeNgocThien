@@ -8,10 +8,10 @@ export const Head = () => {
       {/* ----------------icon------------- */}
         <div className="container d_flex">
           <div className='left row'>
-            <i className='fa fa-phone'></i>
+            {/* <i className='fa fa-phone'></i>
             <label>+12345678</label>
             <i className='fa fa-envelope'></i>
-            <label>Arrid@gmail.com</label>
+            <label>Arrid@gmail.com</label> */}
 
           </div>
           <div className='right  now RText'>
@@ -23,7 +23,7 @@ export const Head = () => {
             <label htmlFor=''>USD</label>
             
             <Link to='/login'>
-            <label>Đăng Nhập</label>
+            <label >Đăng Nhập</label>
             </Link>
             <Link to='/Register'>
             <label>Đăng kí</label>

@@ -67,7 +67,7 @@
   color: #fff;
 }
 .search .f_flex {
-  justify-content: end;
+  text-align: left;
 }
 /*------search-----------*/
 .catgrories {
@@ -173,4 +173,11 @@ header ul li a:hover {
   .header.active {
     height: 10vh;
   }
+  .lable{
+    color:black
+  }
+
+
 }
+
+

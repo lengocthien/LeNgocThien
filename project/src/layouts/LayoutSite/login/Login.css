@@ -159,13 +159,26 @@
   background-image: url("../../assets/images/banner/banner7.jpg");
 } */
 
-.form-container {
+/* .form-container {
     width: px;
     border-radius: 0.75rem;
     background-color: rgba(17, 24, 39, 1);
     padding: 2rem;
     color: rgba(243, 244, 246, 1);
-  }
+  } */
+  .form-container {
+    margin: 10px 0 10px 0;
+  
+      width:auto;
+      border-radius: 0.75rem;
+      background-color: rgba(133, 20, 20, 0.5);
+      padding: 2rem;
+      color: rgba(243, 244, 246, 1);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow:  0px 5px 15px rgba(255, 255, 255, 0.25);
+    
+    }
   
   .title-login {
     text-align: center;
@@ -195,7 +208,7 @@
     border-radius: 0.375rem;
     border: 1px solid rgba(55, 65, 81, 1);
     outline: 0;
-    background-color: rgba(17, 24, 39, 1);
+    background-color: white;
     padding: 0.75rem 1rem;
     /* color: rgba(243, 244, 246, 1); */
   }

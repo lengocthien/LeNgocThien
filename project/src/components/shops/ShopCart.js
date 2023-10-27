@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 // import React, { useState } from "react"
 
@@ -57,7 +58,7 @@ import { urlImage } from "../../config";
 function ShopCart() {
   const { id } = useParams();
   // const navigate = useNavigate(); // chuyen trang
-  const RenderShopItems = ({ shopItems, addToCart }) => {
+  const RenderShopItems = ({ pro, addToCart }) => {
     const [count, setCount] = useState(0);
     const increment = () => {
       setCount(count + 1);
@@ -95,19 +96,23 @@ function ShopCart() {
               <div className='product mtop'>
                 <div className='img'>
                   <span className='discount'>{pro.price_sale}% Off</span>
-                  <img
+                  <Link to={"/details-product/" + pro.slug}> <img
                     className='img-fluid'
+
                     src={urlImage + "product/" + pro.image}
                     alt='lt4.png'
-                  />
-                  {/* <img src={shopItems.cover} alt='' /> */}
-                  {/* <div className='product-like'>
-                     <label>{count}</label> <br />
-                     <i className='fa-regular fa-heart' onClick={increment}></i>
-                   </div> */}
+                  /></Link>
+                  <div className='product-like'>
+                 <label>{count}</label> <br />
+                  <i className='fa-regular fa-heart' onClick={increment}></i>
+                </div>
+                 
+               
+      
                 </div>
                 <div className='product-details'>
-                  <h3>{pro.name}</h3>
+                  <Link to={"/details-product/" + pro.slug}><h3>{pro.name}</h3></Link>
+                  
                   <div className='rate'>
                      <i className='fa fa-star'></i>
                      <i className='fa fa-star'></i>
@@ -120,7 +125,7 @@ function ShopCart() {
                     {/* step : 3  
                         if hami le button ma click garryo bahne 
                        */}
-                    <button onClick={() => addToCart(shopItems)}>
+                    <button onClick={() => addToCart(pro)}>
                       <i className='fa fa-plus'></i>
                     </button>
                   </div>
